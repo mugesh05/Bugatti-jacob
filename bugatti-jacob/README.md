@@ -17,7 +17,7 @@ Requires Node 18+.
 
 ## Deploy to Render
 
-The repository-root `render.yaml` configures this app as a Render Static Site. In Render, choose **New → Blueprint** and connect the repository. The Blueprint installs from this directory, builds with `npm ci && npm run build`, publishes `dist`, and rewrites client-side routes to `index.html`.
+The repository-root `render.yaml` configures this app as a Render Static Site. In Render, choose **New → Blueprint** and connect the repository. The Blueprint installs dependencies from `bugatti-jacob`, builds the app, publishes `bugatti-jacob/dist`, and rewrites client-side routes to `index.html`. If you already created the Render service manually, set the build command to `npm --prefix bugatti-jacob ci && npm --prefix bugatti-jacob run build` and the publish directory to `bugatti-jacob/dist`.
 
 ## Folder structure
 
