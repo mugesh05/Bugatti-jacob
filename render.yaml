@@ -2,8 +2,9 @@ services:
   - type: web
     name: bugatti-jacob-watch-experience
     runtime: static
-    buildCommand: npm --prefix bugatti-jacob ci && npm --prefix bugatti-jacob run build
-    staticPublishPath: bugatti-jacob/dist
+    rootDir: bugatti-jacob
+    buildCommand: npm ci --include=dev && npm run build
+    staticPublishPath: dist
     routes:
       - type: rewrite
         source: /*
