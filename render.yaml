@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: bugatti-jacob-watch-experience
+    runtime: static
+    rootDir: bugatti-jacob
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
